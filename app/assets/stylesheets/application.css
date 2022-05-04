@@ -13,3 +13,125 @@
  *= require_tree .
  *= require_self
  */
+
+ :root {
+  --main-white: #fafafa;
+  --main-green: #00995F;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  font-family: 'Sora', sans-serif ;
+  background-color: var(--main-white);
+}
+
+.nav-container{
+  height: 120px;
+  width: 100%;
+  background-color: var(--main-green);
+}
+
+.btn{
+  border-radius: 20px;
+  padding: 20px 40px;
+  font-weight: 700;
+  font-size: 20px;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+  margin:0;
+}
+
+.btn:active{
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}
+
+.btn-login{
+  font-size: 16px;
+  background: var(--main-white);
+  padding: 10px 15px;
+  border-radius: 10px;
+  color: var(--main-green);
+  font-size: 18px;
+}
+
+.btn-success{
+  background-color: var(--main-green);
+}
+
+
+
+/*-----MENU-----*/
+
+.navbar{
+  background-color: var(--main-green);
+  padding-top: 25px;
+  padding-bottom: 25px;
+  order: 1;
+}
+
+.navbar a:hover{
+  color: white;
+  opacity: 0.9;
+}
+
+.container-fluid{
+  padding-left: 0;
+  padding-right: 0;
+  max-width: 1200px;
+  width: 90%;
+}
+
+.navbar-brand{
+  font-weight: 700;
+  font-size: 28px;
+}
+
+
+.nav-link{
+  padding-right: 0;
+  padding-left: 0;
+  font-weight: 700;
+}
+
+.nav-item{
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+}
+
+.navbar-dark .navbar-toggler {
+  border-color: rgba(255,255,255,0);
+}
+
+.navbar-dark .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='3' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: rgba(255,255,255,1);
+}
+
+.navbar-collapse{
+  order: 2;
+}
+
+.nav-btns{
+  order: 3;
+}
+
+@media (min-width: 992px){
+  .navbar-expand-lg .navbar-nav .nav-link {
+      padding-right: 30px;
+      padding-left: 0px;
+  }
+}
+
+@media (max-width: 991px){
+  .navbar-collapse{
+  order: 3;
+  }
+
+  .nav-btns{
+    order: 2;
+  }
+}
