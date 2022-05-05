@@ -6,7 +6,11 @@
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <button type="button" class="btn btn-login">Log in</button>
+      <% if user_signed_in? %>
+        <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
+      <% else %>
+        <button type="button" class="btn btn-login">Log in</button>
+      <% end %>
     </div>
 
     <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
