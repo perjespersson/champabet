@@ -7,9 +7,12 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <% if user_signed_in? %>
-        <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
+        <%= link_to "Sign out", destroy_user_session_path, :method => :delete, class: "btn btn-login" %>
       <% else %>
-        <button type="button" class="btn btn-login">Log in</button>
+        <li class="nav-item">
+          <%= link_to "Log in", user_session_path, style: "font-size: 20px; color: white; text-decoration: none; font-weight: 700;" %>
+          <%= link_to "Sign up", new_user_registration_path, class: "btn btn-login" %>
+        </li>
       <% end %>
     </div>
 
