@@ -1,1 +1,5 @@
-<h1>Hello and welcome!</h1>
+<% if user_signed_in? %>
+  <h1 style="text-align: center; margin-top: 30px;">Welcome <%= current_user.username %></h1>
+<% else %>
+  <h1 style="text-align: center; margin-top: 30px;">Please sign in</h1>
+<% end %>
